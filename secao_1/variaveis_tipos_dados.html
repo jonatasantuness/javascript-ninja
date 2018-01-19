@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Variaveis e tipos de dados</title>
+</head>
+<body>
+    
+<h1>Variaveis e tipos de dados</h1>
+
+<script>
+    var x;
+    console.log(typeof(x));
+
+    x = 0;
+    console.log(typeof(x));
+
+    x = 1.5;
+    console.log(typeof(x));
+
+    x = "Hello World"
+    console.log(typeof(x));
+
+    x = true;
+    console.log(typeof(x));
+
+    x = null;
+    console.log(typeof(x));
+
+    x = undefined;
+    console.log(typeof(x));
+
+    //Objetos
+    var pessoa = {}
+    console.log(typeof(pessoa));
+
+    //Atribuindo valores paraa as propriedades do objeto
+    pessoa = {
+        altura: 1.90,
+        peso: 67
+    }
+    console.log(pessoa);
+
+    //Acessando propriedas do objeto
+    console.log(pessoa.altura);
+
+    //Atribuir novo valor a propriedade do objeto
+    pessoa.altura = 1.85;
+    console.log(pessoa.altura);
+
+    //Array
+    var numeros = [];
+    console.log(typeof(numeros));
+
+    //Arrays são do tipo 'objeto', então as propriedas do objeto tb podem ser acessadas por ambas notações(A notação de objeto é mais rápida)
+    console.log("O peso da pessoa é: " + pessoa['peso']);
+
+    //Inserindo valores no array
+    numeros = [1,2,3,4,5,6]
+    console.log(numeros);
+
+    //Acessar primeira posição do array '0'
+    console.log(numeros[0]);
+
+
+    
+</script>
+
+</body>
+</html>

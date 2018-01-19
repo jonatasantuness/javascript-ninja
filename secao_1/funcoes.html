@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Funções</title>
+</head>
+<body>
+    
+    <h1>Funções</h1>
+
+    <script>
+        //Funções são blocos de código javascript nomeados que podem ser invocados usando '()'
+        function nome() {
+
+        }
+
+        //invacar funcão
+        nome();
+
+        //Alterando uma variavel com função
+        var x = 2;
+
+        function soma() {
+            x = x + 1;
+        }
+
+        console.log("valor da variavel x: " + x)
+        soma();
+        console.log("valor da variavel x após invocar função: " + x);
+
+        //Uma variavel criada dentro função só existe dentro da função se chama-la fora retorná 'undefined', devido ao escopo da função
+        function funcaoexemplo() {
+            var dentro = "Sou uma variavel dentro do escopo da função";
+        }
+
+        console.log("Variaveis dentro do escopodo não podem ser acessadas! " + typeof(dentro));
+
+        //Variaveis dentro do escopo podem ser acessadas com 'return'
+        function meunome() {
+            var nome = "Jonatas";
+            return nome;
+        }
+
+        console.log("Retorno da variavel com return: " + meunome());
+
+        //Podemos usar o retorno da função para interagir com outros valores
+        var salario = 1500;
+        function maisVR () {
+            var vr = 250;
+            return vr; 
+        }
+
+        console.log("Salario total é: " + (salario + maisVR()));
+
+        //Funções com argumentos
+        function multiplicar (num1, num2) {
+            return num1 * num2;
+        }
+
+        //Se não passar nenhum argumento o retorno será 'NaN' ou 'is not a number'
+        console.log(multiplicar());
+
+        //passando os argumentos com paramero para função agir e retornar o tipo valor esperado
+        console.log(multiplicar(2,6));
+
+    </script>
+
+</body>
+</html>
