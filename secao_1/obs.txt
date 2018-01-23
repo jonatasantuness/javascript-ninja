@@ -1,3 +1,0 @@
--Para criar variaveis utilizar comando 'var'
--Variável sem nenhum valor atribuido é tipo 'undefined'
--O Tipo 'null' significa que a variavel não tem nenhum valor.

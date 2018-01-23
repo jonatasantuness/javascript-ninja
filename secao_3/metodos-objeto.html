@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Métodos de Objetos</title>
+</head>
+<body>
+
+    <h1>Métodos de Objetos</h1>
+    
+    <script>
+
+        var pessoa = {nome: 'Jonatas', idade: 25}
+
+        //para adicionar mais propriedades no objeto
+        pessoa.sexo = 'masculino';
+        console.log(pessoa);
+
+        //Métodos são funcções que podem ser adicionadas como um valor no objeto 
+        //adicionando um método ao objeto
+        pessoa.andar = function() {
+            return pessoa.nome + " esta andando!"
+        }
+        console.log(pessoa);
+        console.log(pessoa.andar());
+
+        //criando um método para somar a idade da pessoa no aniversário
+        pessoa.aniversario = function () {
+            pessoa.idade++;
+        }
+        console.log(pessoa.aniversario());
+        console.log(pessoa);
+
+        //metodo para concaternar valores do objeto
+        pessoa.sobrenome = 'Souza'
+        pessoa.nomeCompleto = function () {
+            return pessoa.nome + ' ' + pessoa.sobrenome;
+        }
+        console.log(pessoa.nomeCompleto());
+        console.log(pessoa);
+
+        
+
+    </script>
+    
+</body>
+</html>

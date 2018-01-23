@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Operadores Unários</title>
+</head>
+<body>
+    <h1>Operadores Unários</h1>
+
+    <script>
+
+        //Os operadores unarios (+ ou -) tentam converter o valor para tipo 'number'
+        console.log(typeof(+'3'));
+
+        //Ao tentar somar uma string que contém numero, o javascript sempre vai concaternar
+        console.log(3 + '3');
+
+        //Para converter em 'number' e depois somar precisaria de um '+' para somar e operador unário '+' para converter a string.
+        console.log(3 + + '3');
+
+    </script>
+
+</body>
+</html>

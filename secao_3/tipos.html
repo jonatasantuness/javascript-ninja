@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Tipos</title>
+</head>
+<body>
+    <h1>Tipos</h1>
+
+
+    <script>
+
+        /* 
+        Tipos Primitivos
+        -nummber
+        -string
+        -boolean
+        -null (ausencia de valor explicita, tem que atribuir o valor null)
+        -undefined (ausencia de valor)
+
+        Tipos Objetos (conjunto de propriedades com propriedades e valor separados por virgula entre chaves '{a: 1. b: 2}' que representam algo real.
+
+        */
+
+        //objeto
+        console.log(typeof({propriedade: 'valor', propriedade2: 10}));
+        var objeto = {propriedade: 'valor', propriedade2: 10, propriedade3: false}
+        console.log(objeto)
+
+        //Acessando valor do objeto
+        var pessoa = {nome: 'jonatas', peso: 65, altura: 1.90};
+        console.log(pessoa.nome);
+
+        //objetos com outros objetos
+        var carro = {marca: 'Renault', modelo: 'Sandero', ano: 2009};
+        pessoa = {nome: 'jonatas', peso: 65, altura: 1.90, veiculo: carro};
+        console.log(pessoa);
+
+        //Obejtos podem conter funcções. As Funções são obejtos de 'primeira classe' pois podem ser atribuidas a variaveis.
+        //quando a função é atribuida a uma variavel o nome dela não é obrigatório
+        var func = function (){
+            return "Hello World";
+        }
+
+        console.log(func);
+        console.log(typeof(func));
+        console.log(func());
+
+    </script>
+    
+</body>
+</html>

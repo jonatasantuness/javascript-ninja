@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Condicionais</title>
+</head>
+<body>
+
+    <h1>Condicionais</h1>
+
+    <script>
+        var x = 3;
+        var y = 7;
+
+        if (x === 3) {
+            y = 3;
+            console.log(y);
+        }
+
+        if (x === y) {
+            --x;
+            ++y;
+            console.log(x);
+            console.log(y);
+        }
+
+        if (x === 2 & y === 4) {
+            console.log('As variaveis valem 2 e 4')
+        }
+
+        if(x === 2 || y === 10) {
+            console.log('Ao menos uma das condições são verdadeiras');
+        }
+
+        if(x === 2) {
+            y = x;
+            console.log(y);
+        } else {
+            console.log("Caiu no 'senão'");
+        }
+
+    </script>
+    
+</body>
+</html>
