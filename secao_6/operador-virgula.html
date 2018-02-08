@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Operador Virgula</title>
+</head>
+<body>
+
+    <h1>Operador Virgula</h1>
+
+    <script>
+        //o operado ',' junta varias expressões em uma única expressão
+
+        //O javascript vai ler da esquerda para direita, como se o 'var' valesse para todas as variaveis e as variaveis que não receberam valo ficam como undefined.
+        var a, b = 2, c;
+
+        function operadorVirgula() {
+            var x = 0;
+            //como o javascript retorna apenas um valor, ele vai resolver o problema antes da virgula e depois retornar.
+            return (x +=1, x); //return ++x
+        }
+
+        console.log(operadorVirgula());
+    </script>
+    
+</body>
+</html>

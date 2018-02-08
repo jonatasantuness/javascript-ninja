@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Retorno de Funções</title>
+</head>
+<body>
+
+    <h1>Retorno de Funções</h1>
+
+    <script>
+        //Tipos de retorno
+
+        //Retorna String
+        function retornaString() {
+            return "Retornando String";
+        }
+        console.log(retornaString());
+
+        //Retorna Numero
+        function retornaNumero() {
+            return 23;
+        }   
+        console.log(retornaNumero());
+
+        //Retorna Booleano
+        function retornaBooleano() {
+            return true;
+        }   
+        console.log(retornaBooleano());
+
+        //Retorna Array
+        function retornaArray() {
+            return [10,20,"Hello"];
+        }   
+        console.log(retornaArray());
+
+        //É possivel acessar a array pelo indice
+        console.log(retornaArray()[2]);
+
+        //Retorna Objeto
+        function retornaObjeto() {
+            return {
+                prop1: "Ola",
+                prop2: "Mundo"
+            };
+        }   
+        console.log(retornaObjeto());
+
+        //É possivel acessar a propriedade do objeto no retorno da função
+        console.log(retornaObjeto().prop1);
+
+        //Retorna Null
+        function retornaNull() {
+            return null;
+        }   
+        console.log(retornaNull());
+
+        //Retorna Undefined
+        function retornaUndefined() {
+            return undefined;
+        }   
+        console.log(retornaUndefined());
+
+        //Funcções vazias retornam 'undefined'
+        function funcaoVazia() {
+            
+        }   
+        console.log(funcaoVazia());
+        
+    </script>
+    
+</body>
+</html>

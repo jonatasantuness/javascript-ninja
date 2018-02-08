@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Switch</title>
+</head>
+<body>
+
+    <h1>Switch</h1>
+
+    <script>
+        function semana(x) {
+            switch(x){
+                case 1:
+                console.log('domingo');
+                break;
+                case 2:
+                console.log('segunda');
+                break;
+                case 3:
+                console.log('terça');
+                break;
+                case 4:
+                console.log('quarta');
+                break;
+                case 5:
+                console.log('quinta');
+                break;
+                case 6:
+                console.log('sexta');
+                break;
+                case 7:
+                console.log('sabado');
+                break;
+                default:
+                console.log('Digite um numero valido');
+            }
+        }
+
+        //testando o switch com os dias da semana
+        for(var i = 1; i < 9; i++) {
+            console.log(semana(i));
+        };
+
+        
+    </script>
+    
+</body>
+</html>

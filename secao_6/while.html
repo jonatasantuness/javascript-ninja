@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>While</title>
+</head>
+<body>
+
+    <h1>While</h1>
+
+    <script>
+
+        console.log('Operador while')
+
+        //Faz uma ação enquanto a expressão passada por parametro for 'truthy'
+        var contador = 0;
+        while (contador < 10) {
+            console.log(contador);
+            contador++
+        }
+
+        //como sabemos o valor '0' é 'falsy', então neste caso o while nem funcionaria pois já começa com um valor falsy.
+        while (0) {
+            console.log('zero');
+        }
+
+        
+        //Para fazer uma contagem descendente até chegar em 0 e parar o while
+        console.log('Operador while descendente')
+
+        var contadorMenos = 10;
+        while (contadorMenos > 0) {
+            console.log(contadorMenos--);
+        }
+
+        //também da para fazer desta forma, avaliando se o parametro é truthy já decrementando ele.
+        console.log('Operador while descendente 2')
+        var counterMenos = 10;
+        while (counterMenos--) {
+            console.log(counterMenos);
+        }
+
+        
+
+    </script>
+    
+</body>
+</html>

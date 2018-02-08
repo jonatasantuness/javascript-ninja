@@ -44,8 +44,8 @@
         */
         pessoa.fazerAniversario = function () {
             pessoa.idade++;
-        }
-        pessoa.fazerAniversario()
+        };
+        pessoa.fazerAniversario();
         console.log(pessoa);
 
         /*
@@ -59,9 +59,9 @@
         booleano que representa "verdadeiro";
         */
         pessoa.andar = function (m) {
-            pessoa.caminhouQuantosMetros = m;
+            pessoa.caminhouQuantosMetros += m;
             pessoa.andando = true;
-        }
+        };
         pessoa.andar(40);
         console.log(pessoa);
 
@@ -71,7 +71,7 @@
         */
         pessoa.parar = function () {
             pessoa.andando = false;
-        }
+        };
         pessoa.parar();
         console.log(pessoa);
 
@@ -81,7 +81,7 @@
         */
         pessoa.nomeCompleto = function () {
             return ("Ola, meu nome é " + pessoa.nome + ' ' + pessoa.sobrenome);
-        }
+        };
         console.log(pessoa.nomeCompleto());
 
         /*
@@ -90,7 +90,7 @@
         */
         pessoa.mostrarIdade = function () {
             return 'Olá, eu tenho ' + pessoa.idade + ' anos';
-        }
+        };
         pessoa.mostrarIdade();
         console.log(pessoa.mostrarIdade());
 
@@ -100,7 +100,7 @@
         */
         pessoa.mostrarPeso = function () {
             return "Eu tenho " + pessoa.peso + 'kg';
-        }
+        };
         console.log(pessoa.mostrarPeso());
 
         /*
@@ -109,7 +109,7 @@
         */
         pessoa.mostrarAltura = function () {
             return "minha altura é " + pessoa.altura;
-        }
+        };
         console.log(pessoa.mostrarAltura());
 
         /*
@@ -143,7 +143,7 @@
         */
         pessoa.fazerAniversario = function () {
             pessoa.idade += 3;
-        }
+        };
         pessoa.fazerAniversario();
         console.log(pessoa);
         /*
@@ -170,7 +170,7 @@
             } else {
                 pessoa.andando = false;
             }
-        }
+        };
         pessoa.andar(5);
         pessoa.andar(5, 5);
         pessoa.andar(5, 5, 5);

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Parâmetros de Funções</title>
+</head>
+<body>
+
+    <h1>Parâmetros de Funções</h1>
+
+    <script>
+
+        //Passando Array como parametro
+        var arr = ['Joao','Maria','Ronaldo'];
+
+        function retornarArgumento(arg) {
+            return arg[2];
+        }
+        console.log(retornarArgumento(arr));
+        console.log(retornarArgumento(
+            ['Banana', 'Maça', 'Melancia']
+        ));
+
+        //Passando objetos como parametro
+        var obj = {
+            nome: 'Jonatas',
+            curso: 'Javascript Ninja',
+            idade: '25'
+        };
+
+        function retornarObj(arg) {
+            return arg;
+        }
+        console.log(retornarObj(obj));
+        console.log(retornarObj(obj.nome));
+
+        //Passando objetos como parametro e retornando uma propriedade
+        function retornarObjProp(arg) {
+            return arg.curso;
+        }
+        console.log(retornarObjProp(obj));
+
+    </script>
+    
+</body>
+</html>

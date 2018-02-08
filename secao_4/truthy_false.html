@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Truthy e Falsy</title>
+</head>
+<body>
+
+    <h1>Truthy e Falsy</h1>
+
+    <script>
+
+        //Falsy: Valores do JS representados por 'false' : undefined, null, NaN, 0, -0, "", '' e obviamente o false.
+        //Truthy: Valores do JS representados por 'true': todos os outros.
+
+        var teste;
+
+        if (1){
+            teste = true;
+        } else {
+            teste = false;
+        }
+        console.log('1 é igual a : ' + teste);
+
+        if (0){
+            teste = true;
+        } else {
+            teste = false;
+        }
+        console.log('0 é igual a : ' + teste);
+        
+        if (undefined){
+            teste = true;
+        } else {
+            teste = false;
+        }
+        console.log('"undefined" é igual a : ' + teste);
+
+        if (null){
+            teste = true;
+        } else {
+            teste = false;
+        }
+        console.log('"null" é igual a : ' + teste);
+
+        if (NaN){
+            teste = true;
+        } else {
+            teste = false;
+        }
+        console.log('"NaN" é igual a : ' + teste);
+
+        if (""){
+            teste = true;
+        } else {
+            teste = false;
+        }
+        console.log('String vazia é igual a : ' + teste);
+
+        if ("0"){
+            teste = true;
+        } else {
+            teste = false;
+        }
+        console.log('String com numero 0 é igual a : ' + teste);
+
+        if (+"0"){
+            teste = true;
+        } else {
+            teste = false;
+        }
+        console.log('String com numero 0 com operador unário é igual a : ' + teste);
+
+        //Descobrir a representação booleana sem usar if, usando o unário '!'.
+        //Um unico sinal de exclamação converte para booleano e retorna o inverso (negação)
+        console.log('Utilizand o "!" : ' + !true);
+
+        //Dois sinais de exclamação converte para booleano e retorna o inverso (negação), depois inverte de novo então podemos usar para verificar a representação booleana de um valor
+        console.log('Utilizand o "!!" : ' + !!true);
+        console.log('Utilizand o "!!" : ' + !!'0');
+
+    </script>
+    
+</body>
+</html>

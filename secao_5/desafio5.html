@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Desafio 5</title>
+</head>
+<body>
+
+    <h1>Desafio 5</h1>
+
+    <script>
+        /*
+        Crie uma variável qualquer, que receba um array com alguns valores aleatórios
+        - ao menos 5 - (fica por sua conta os valores do array).
+        */
+        var q = ['Jonatas', 23, "Preto", 1.85, "Pizza"]
+
+        /*
+        Crie uma função que receba um array como parâmetro, e retorne esse array.
+        */
+
+        function retornarArray(arg) {
+            return arg;
+        }
+        console.log(retornarArray(q));
+
+        /*
+        Imprima o segundo índice do array retornado pela função criada acima.
+        */
+        console.log(retornarArray("Segundo item do array: " + q[1]));
+
+        /*
+        Crie uma função que receba dois parâmetros: o primeiro, um array de valores; e o
+        segundo, um número. A função deve retornar o valor de um índice do array que foi passado
+        no primeiro parâmetro. O índice usado para retornar o valor, deve ser o número passado no
+        segundo parâmetro.
+        */
+        function retornarParam(arr,ind) {
+            return arr[ind];
+        }
+        console.log(retornarParam(q,4));
+
+        /*
+        Declare uma variável que recebe um array com 5 valores, de tipos diferentes.
+        */
+        var coisasMinhas = q;
+
+        /*
+        Invoque a função criada acima, fazendo-a retornar todos os valores do último
+        array criado.
+        */
+        for (var i = 0; i < coisasMinhas.length; i++) {
+            console.log("Retornado item do Array: " + retornarParam(coisasMinhas,[i]));
+        }
+
+        /*
+        Crie uma função chamada `book`, que recebe um parâmetro, que será o nome do
+        livro. Dentro dessa função, declare uma variável que recebe um objeto com as
+        seguintes características:
+        - esse objeto irá receber 3 propriedades, que serão nomes de livros;
+        - cada uma dessas propriedades será um novo objeto, que terá outras 3
+        propriedades:
+        - `quantidadePaginas` - Number (quantidade de páginas)
+        - `autor` - String
+        - `editora` - String
+        - A função deve retornar o objeto referente ao livro passado por parâmetro.
+        - Se o parâmetro não for passado, a função deve retornar o objeto com todos
+        os livros.
+        */
+
+        function book(n) {
+            var livros = {
+                'harry potter': {
+                    qtdePag: 200,
+                    autor: 'J K Rolling',
+                    editora: 'Edibooks'
+                },
+                'game of thrones': {
+                    qtdePag: 550,
+                    autor: 'G Martin',
+                    editora: 'Edilivros'
+                },
+                'get down': {
+                    qtdePag: 250,
+                    autor: 'J. Bronx',
+                    editora: 'EdiPaper'
+                }
+            };
+
+            if (n === undefined) {
+                return livros;
+            }
+            
+            //Para acessar a uma propriedade desconhecida ou string podemos usar a notação de array 'array[i]' ao invés de objeto 'obj.prop'
+            return livros[n];
+            
+        }
+
+        console.log(book('harry potter'));
+        
+        /*
+        Usando a função criada acima, imprima o objeto com todos os livros.
+        */
+        console.log(book());
+
+        /*
+        Ainda com a função acima, imprima a quantidade de páginas de um livro qualquer,
+        usando a frase:
+        "O livro [NOME_DO_LIVRO] tem [X] páginas!"
+        */
+        console.log(book('game of thrones').qtdePag);
+
+        /*
+        Ainda com a função acima, imprima o nome do autor de um livro qualquer, usando
+        a frase:
+        "O autor do livro [NOME_DO_LIVRO] é [AUTOR]."
+        */
+        console.log("O autor do livro Harry Potter é: " + book('harry potter').autor);
+
+        /*
+        Ainda com a função acima, imprima o nome da editora de um livro qualquer, usando
+        a frase:
+        "O livro [NOME_DO_LIVRO] foi publicado pela editora [NOME_DA_EDITORA]."
+        */
+
+        //usando a notação de array só para variar
+        console.log("O livro Game of Thrones foi publicado pela editora: " + book('game of thrones')['editora']);
+        
+
+    </script>
+    
+</body>
+</html>
