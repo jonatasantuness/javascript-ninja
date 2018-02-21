@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Arrays</title>
+</head>
+<body>
+
+    <h1>Propriedades e métodos dos Arrays</h1>
+
+    <h2>Push</h2>
+
+    <script>
+        //Para adicionar um item no array podemos usar o método 'push()'
+        var arr = ["jonatas", 23, true, "preto", {carro: 'Hyundai'}];
+
+        arr.push({celular: 'iphone 5s'});
+        console.log(arr);
+
+        //Adicionando um array dentro do array
+        arr.push([23, 06, 1992]);
+        console.log(arr);
+        console.log('Exibindo um item do array: ' + arr[6][2]);
+        
+        //Adicionando uma função no array
+        arr.push(
+            function soma(x,y) {
+                return x + y;
+            }
+        );
+        console.log('Retorno da função soma: ' + arr[7](5,3));
+
+        
+
+    </script>
+    
+</body>
+</html>

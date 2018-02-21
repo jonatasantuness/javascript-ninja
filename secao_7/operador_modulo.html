@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Operador Modulo '%'</title>
+</head>
+<body>
+
+    <h1>Operador Modulo %</h1>
+
+    <script>
+        //Retorna o resto da divisão entre dois operandos
+        console.log("módulo sem resto: " + 3%1);
+        console.log("módulo com resto: " + 5%2);
+
+        //É útil para verificar numeros pares, pq numeros dividos por dois sempre tem 0 de 'resto'
+        //imprimindo de 0 a 20 só com numeros pares
+        var num = 0;
+        while(num <= 20){
+            num % 2 === 0 ? console.log(num) : '';
+            num++; 
+        }
+    
+    </script>
+    
+</body>
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Arrays</title>
+</head>
+<body>
+
+    <h1>Propriedades e métodos dos Arrays</h1>
+
+    <h2>Length</h2>
+
+    <script>
+    //length: propriedade que conta a quantidade de itens de um array
+    var arr = ["jonatas", 23, {bola: 'azul'}, function(){}];
+    console.log('Quantidade de elementos: ' + arr.length);
+
+    //percorrendo uma array com 'length'
+    var qtd = arr.length;
+    while (qtd > 0) {
+        console.log('item ' + qtd + ': ' + arr[--qtd]);
+    }
+
+    //Exibir uma propriedade de um objeto dentro do array enquanto percorre o mesmo.
+    var qtd = arr.length;
+    while (qtd > 0) {
+        console.log('item ' + qtd + ': ' + arr[--qtd]);
+        if (qtd === 2) {
+            console.log('Propriedade do obj: ' + arr[qtd].bola);
+        }
+    }
+
+    </script>
+    
+</body>
+</html>
