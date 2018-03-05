@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Wrapper Objects</title>
+</head>
+<body>
+
+    <h1>Wrapper Objects</h1>
+
+    <p>Valores primitivos não são objetos.</p>
+    <p>Construtores: Funções que criam novos objetos.</p>
+
+    <script>
+        var name = "jonatas"
+        console.log(name.length);
+
+        //Para usar o construtor basta usar o comando 'new'
+        var nome = new String('Johnny');
+        var age = new Number(25);
+        var ninja = new Boolean(false);
+        
+        //Olhe a diferença do tipo, quando usamos construtor a variavel se torna um objeto e não uma string, numero ou boolean.
+        console.log(typeof(name));
+        console.log(typeof(nome));
+        console.log(typeof(age));
+        console.log(typeof(ninja));
+
+        //Para retorna o valor literal usamos 'valueOf()'
+        console.log(nome.valueOf());
+        
+        //Ou seja quando usamos um método em um valor literal o JS cria na memória um objeto pelo construtor com seu tipo correspondente, depois de usar o método o objeto volta a ser tipo primitivo novamente.
+        console.log(name.valueOf());
+        console.log(typeof(name));
+
+        //O Wapper Objects pode ser usado para converter
+        var myVar = String(10);
+        console.log('A variavel foi convertida para o tipo: ' + typeof(myVar));
+
+        var myVar2 = Number("23");
+        console.log('A variavel foi convertida para o tipo: ' + typeof(myVar2));
+        
+        //PAra retornar o equivalente booleano. além do método do '!!' podemos usar o método de conversão pelo wrapper object.
+        var myVar3 = Boolean({});
+        console.log('A variavel foi convertida para o tipo: ' + typeof(myVar3));
+        
+        //No exemplo acima, um objeto vazio é 'falsy'
+        console.log(!!myVar3)
+
+    </script>
+    
+</body>
+</html>

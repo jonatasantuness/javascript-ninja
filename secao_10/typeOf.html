@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>typeOf()</title>
+</head>
+<body>
+
+    <h1>typeOf()</h1>
+
+    <h2>Este operador é mais recomendado para utlizar em tipos primitivos.</h2>
+
+    <p>Operador Unário que retorna o tipo do operando</p>
+
+    <script>
+        //Retornando tipos
+        var vazia;
+        console.log(typeof(vazia));
+        console.log(typeof(undefined));
+        console.log(typeof(function(){}));
+        console.log(typeof(true));
+        console.log(typeof(23));
+        console.log(typeof(NaN));
+        console.log(typeof("Ninja"));
+
+        //qualquer outro objeto que não seja uma 'function', o JS vai retornar 'object'
+        console.log(typeof({}));
+        console.log(typeof([]));
+
+        //A T E N Ç Ã O//
+        //o 'null' vai retornar 'object' também, mas por um erro de implementação da linguagem JS.
+        console.log(typeof(null));
+
+        
+    </script>
+    
+</body>
+</html>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Loops</title>
+</head>
+<body>
+
+    <h1>Loops</h1>
+
+    <script>
+        //while
+        var counter =1;
+        while(counter < 10) {
+            console.log(counter++);
+        }
+
+        //do while
+        var contador = 10;
+        do {
+            console.log(contador++)
+        } while (contador < 10);
+
+        //for in
+        //percorre propriedades de objetos, é mais lento que o 'for' normal.
+        var car = {
+            marca: 'Volkswagen',
+            modelo: 'gol',
+            ano: 2013
+        };
+
+        for (var prop in car) {
+            console.log(prop);
+        }
+
+        //O 'in' tb pode ser usado para verificar se uma propriedade existe em um objeto
+        console.log( 'modelo' in car);
+    </script>
+    
+</body>
+</html>

@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Saltos</title>
+</head>
+<body>
+
+    <h1>Saltos</h1>
+
+    <h1>Instruções para 'pular' partes do código.</h1>
+
+    <p>Return</p>
+    <p>Break</p>
+
+    <script>
+        //o 'return' pode realizar um 'salto', como no caso abaixo onde existem duas intruções porém depois do return o JS igora o resto.
+        function myFunction() {
+            //primeira instrução
+            var number = 10;
+            if(number === 10) {
+                return true;
+            }
+
+            //segunda instrução
+            var number2 = 5;
+            var name = 'jonatas';
+            return name + ' ' + number;
+        }
+        console.log(myFunction());
+
+        //Break
+        //O 'break' impede que cases falsos sejam exibidos e 'salta' o código.
+        var num = 10;
+        switch (num) {
+            case 1:
+                console.log('1');
+                break;
+            case 2:
+                console.log('2');
+                break;
+            case 10:
+                console.log('10');
+                break;
+            default:
+                console.log('default');
+        }
+        console.log('fim do switch');
+        
+        //o 'break' pode ser utilizado em outros lugares.
+        for(var i = 0; i < 10; i++) {
+            if(i === 5) {
+                break;
+            }
+            console.log(i);
+        }
+        
+        //O 'continue' pula para próxima etapa
+        for(var i = 0; i < 10; i++) {
+            if(i === 5) {
+                continue;
+            }
+            console.log('Etapa: ' + i);
+        }
+
+    </script>
+    
+</body>
+</html>

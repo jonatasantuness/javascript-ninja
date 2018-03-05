@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Functional Programming</title>
+</head>
+<body>
+
+    <h1>Functional Programming</h1>
+
+    <p>Programar no contexto baseados em funções.</p>
+
+    <h2>Objetos de primeira classe</h2>
+    <p>As funções são objetos de primeira classe, ou seja,São elementos que recebem o mesmo tratamento que os objetos no javascript permitindo a programação funcional.</p>
+
+
+    <script>
+
+        //Pelo fato das funções em JS serem objetos de primeira classe, podemos fazer uma função que retorna outra função
+        function adder(x) {
+            return function(y){
+                return x + y;
+            };
+        }
+        
+        //criando uma variavel 'add2' para adicionar o primeiro parametro 'x', pois essa variavel vai retornar uma função que retorna uma outra função onde podemos passar outro paramêtro 'y'.
+        var add2 = adder(2);
+        console.log(add2(3));
+
+        //Ou retornando a função passando direto os parametros. Passa o parametro, executa, retorna outra função, passa o outro parametro, executa de novo.
+        console.log(adder(2)(3));
+    
+    </script>
+
+    <script>
+        //Passando funções por parametro.
+        function exibirOutraFuncao(func) {
+            return func();
+        }
+
+        //Retornando uma função usando outra função como parametro.
+        console.log(
+            exibirOutraFuncao(function() {
+                return "Estou sendo exibida por outra função!";
+            })
+        );
+
+        //Retornando uma função usando outra função já declarada como parametro.
+        function meExiba() {
+            return "Estou sendo exibida por outra função como parametro!";
+        }
+        console.log(exibirOutraFuncao(meExiba));
+    </script>
+    
+</body>
+</html>

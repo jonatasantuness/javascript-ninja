@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Hoisting</title>
+</head>
+<body>
+
+    <h1>Hoisting</h1>
+
+    <script>
+        //O Hosting ou 'Içamento' ou ainda 'Elevação', é uma caraceristica do JS que quando encontra uma função literal mesmo que seja depois de seu return, ele a move para cima.
+        function myFunction(){
+            var num1 = 1;
+            var num2 = 2;
+            return sum();
+            function sum(){
+                return num1 + num2;
+            }
+        }
+
+        //ou seja o JS vai tranformar a função acima nisso:
+        /*function myFunction(){
+            var num1 = 1;
+            var num2 = 2;
+            return sum();
+            function sum(){
+                return num1 + num2;
+            }
+        }*/
+
+        //Ou seja sempre que houver um função literal, elá disponivel dentro do escopo de onde ela está.
+
+        console.log(myFunction());
+        
+        //Agora se jogarmos a função dentro de uma váriavel, o JS não vai conseguir fazer o hoistig
+        function myFunction2(){
+            var num1 = 1;
+            var num2 = 2;
+            return func();
+            var func = function sum(){
+                return num1 + num2;
+            }
+        }
+
+        //Neste caso o JS sobe a variavel com o valor 'undefined' e depois atribui no momento definido, pois as variaveis só estão disponiveis a partir do ponto onde foi feita a atribuição
+        /*function myFunction2(){
+            var num1 = 1;
+            var num2 = 2;
+            var sum = undefined;
+            return sum();
+            sum = function sum(){
+                return num1 + num2;
+            }
+        }*/
+
+        // console.log(myFunction2());
+
+        //Mais um exemplo de escopo de variaveis e hoisting(vai retornar um 'undefined' a mais pq não colocarei return nessa função...)
+        function myFunction3(){
+            console.log('Antes de declarar', numero);
+            var numero = 10;
+            console.log('Depois de declarar', numero);
+        }
+        console.log(myFunction3());
+    </script>
+    
+</body>
+</html>

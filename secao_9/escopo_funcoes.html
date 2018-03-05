@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Escopo de Função</title>
+</head>
+<body>
+
+    <h1>Escopo de Função</h1>
+
+    <script>
+        //Uma função dentro de uma função não pode ser chamada fora do escopo assim como as variaveis locais
+        //A função 'sum' está fazendo o papel de 'clojure' ou seja, é uma função que consegue acessar parametros externos a ela (as variaveis num1 e num2) enquanto a 'myFunction' não acessa variaveis dentro da 'sum'
+        function myFunction(){
+            var num1 = 1;
+            var num2 = 2;
+            function sum(){
+                return num1 + num2;
+            }
+            return sum();
+        }
+        //Se chamar a função myFunction, teremos um retorno
+        console.log(myFunction());
+
+        //A função 'sum' só existe enquanto a função myFunction existir
+        // console.log(sum());
+        // console.log(num1);
+
+        //Se declarar as variaveis depois da função também dará certo pois na ordem o JS: le a função 'sum', depois le as variaveis 'num1' e 'num2' e depois invoca a função 'sum'.
+        function myFunction(){
+            function sum(){
+                return num1 + num2;
+            }
+            var num1 = 1;
+            var num2 = 2;
+            return sum();
+        }
+        console.log(myFunction());
+
+    </script>
+    
+</body>
+</html>

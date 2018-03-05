@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>A Importância de nomear Funções</title>
+</head>
+<body>
+
+    <h1>A Importância de nomear Funções</h1>
+
+    <p>-Facilitar o Debug</p>
+    <p>-Sem atribuir nome, a função não pode ser invocada ao menos ques seja atribuida a uma variável.</p>
+
+    <script>
+        function func() {
+            return "Ola";
+        }
+        
+        //A função é um objeto e também tem seus métodos, como o 'name' que retorna o seu nome.
+        console.log('Nome da função: ' + func.name);
+        
+        //Se atribuir a função a uma váriavel, o método 'name' conitnuara a retornar o nome da função e não da variavel.
+        var ola = function hello(){
+            return "Ola Mundo!";
+        }
+        console.log(ola.name);
+
+    </script>
+    
+</body>
+</html>
