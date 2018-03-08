@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Métodos Arrays</title>
+</head>
+<body>
+
+    <h1>Métodos Arrays</h1>
+
+    <script>
+
+        //O Object do JS possui uma propriedade(método) chamada toString que converte para string
+        var obj = {a: 1, b: 2, c: 3};
+        console.log(obj.toString());
+        console.log(typeof(obj.toString()));
+        
+        //O toString possui uma implmentação diferente para diferente objeto do JS
+
+        //No array ele pega todos os itens e separa com uma virgula, como no método 'join' porém sem argumentos, o método mantém a variavel intacta e não transforma em string.
+        var arr = [1,2,3];
+        console.log(arr.toString());
+        console.log('Continua sendo array(object) : ' + typeof(arr));
+
+        //Método concat
+        //ESte método se parece com o 'push' porém ele não modifica a array, e só adicionar um argumento retornando uma nova array
+        console.log(arr.concat('intruso'));
+        console.log(arr);
+
+        //É possivel concatenar tb outra array
+        console.log('Concatenando arrays: ' + arr.concat([4,5,6]));
+
+        //NÃO é possivel concatenar arrays multidimensionais, só irá retornar a array
+        console.log(arr.concat([4,5,6], [[7,8,9]]));
+        
+        //unshift()
+        //O método adiciona um item no inicio do array (tem como retorno o length novo do array)
+        arr.unshift('intruso do unshift');
+        console.log(arr);
+
+        //shift()
+        //O método remove o primeiro item do array (temo como retorno o item removido)
+        arr.shift();
+        console.log(arr);
+
+    </script>
+    
+</body>
+</html>

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Slice e Spice</title>
+</head>
+<body>
+
+    <h1>Slice e Spice</h1>
+
+    <script>
+
+        //slice()
+        //Retorna um pedaço do array, tem 2 parametros sendo o primeiro o indice de onde devemos começar a seleção e o segundo o término (segundo parametro pode deixar vazio indicando que vai até o final), lembrando que no segundo parametro o ultimo numero do indice não conta. O método não modifica o array.
+        var arr = [0,1,2,3,4,5];
+        console.log(arr.slice().toString());
+        console.log(arr.slice(2).toString());
+        console.log(arr.slice(1,3).toString());
+
+        //se usar o parametro negativo ele pega o length e subtrai o valor
+        console.log('Length do array: ' + arr.length)
+        console.log('Slice Negativo: ' + arr.slice(-3).toString());
+
+        //Se colocar um segundo parametro menor ele retornar vazio
+        console.log('Slice inválido: ' + arr.slice(3,1).toString());
+
+        //splice()
+        //Modifica o array principal, remove valores, adiciona valores
+        arr.splice(3);
+        console.log('Removendo itens: ' + arr.toString());
+        
+        //removendo um pedaço
+        arr = [0,1,2,3,4,5];
+        arr.splice(2,3);
+        console.log('Removendo um pedaço: ' + arr.toString());
+
+        //Depois do segundo parametro, é possivel adicionar mais parametrôs que serão inseridos no array e os indices deles serão a partir do primeiro parametro
+        arr = [0,1,2,3,4,5];
+        arr.splice(3,0,' e ' + 'Já! ');
+        console.log('Adicionando um item: ' + arr.toString());
+        
+        //Vamos remover as letras e deixar os numeros
+        //primeiro argumento: começa a remover a partir do indice 2
+        //segundo argumento: remove até o indice 5
+        //terceiro argumento: começa a acionar os itens a partir do primeiro argumento
+        arr = [0,1,'a','b','c','d',5,6,7];
+        arr.splice(2,5,2,3,4);
+        console.log('Arrumando o array: ' + arr.toString());
+    
+    </script>
+    
+</body>
+</html>

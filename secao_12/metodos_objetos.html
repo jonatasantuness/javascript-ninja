@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Métodos de Objetos</title>
+</head>
+<body>
+
+    <h1>Métodos de Objetos</h1>
+
+    <script>
+        var obj = {
+            x: '1',
+            y: '2'
+        }
+
+        //O método 'keys' retorna um array com todas as propriedades de um objeto.
+        console.log(Object.keys(obj));
+        
+        //O 'keys' é útil para usar métodos de Arrays em objetos como exemplo o 'length'
+        console.log(Object.keys(obj).length);
+        
+        //O método 'isPrototypeOf' verifica se um objeto foi usado como protótipo para outro.
+        var obj2 = Object.create(obj);
+        console.log('O obj2 utilizou o protótipo de obj? ' + obj.isPrototypeOf(obj2));
+        
+        //Se um terceiro objeto herdar o prototipo de um segundo que herdou de um primeiro, também retornará true.
+        var obj3 = Object.create(obj2);
+        console.log('O obj3 utilizou o protótipo de obj? ' + obj.isPrototypeOf(obj3));
+
+        //O 'json' é uma string que representa um objeto, é possivel transformar o objeto numa string em formarto json com JSON.stringify(obj),
+        console.log(JSON.stringify(obj));
+        console.log('Tipo depois do stringfy: ' + typeof(JSON.stringify(obj)));
+
+        //E para transformar em objeto novamente usamos JSON.parse(str)
+        var str = JSON.stringify(obj);
+        JSON.parse(str);
+        console.log(str);
+        console.log(typeof('Tipo depois do parse: ' + JSON.parse(str)));
+
+        //Arrays
+        var arr = [];
+
+        //Pode-se adicionar itens pelo indice, os indices que não tiverem valor adicionado ficam vazios e retornam undefined
+        arr[1] = 0;
+        arr[0] = 1;
+        arr[5] = 'indice 5';
+        console.log(arr);
+
+        //Para remover itens usmos o 'pop()', se não colocar o indice como parametro, ele remove o ultimo item.
+        console.log(arr.pop());
+        console.log(arr);
+
+        //Da para inclusive jogar esse ultimo valor numa variavel
+        arr.push('ultimo item');
+        var last = arr.pop();
+        console.log(last);
+
+
+    </script>
+    
+</body>
+</html>

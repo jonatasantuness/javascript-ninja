@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Métodos do Array</title>
+</head>
+<body>
+
+    <h1>Métodos do Array</h1>
+
+    <script>
+        var arr = [];
+        arr.push('arroz', 'feijao', 'macarrão');
+        console.log(arr);
+        
+        //O método 'join()' junta os item do array numa string
+        console.log(arr.join());
+        console.log(typeof(arr.join()));
+
+        //O 'join' aceita um parametro que é o caracter que separa a string
+        console.log(arr.join(' / '));
+        console.log(arr.join(' & '));
+
+        //O metodo 'reverse()' reverte os itens do array
+        console.log(arr.reverse());
+        console.log('Depois do reverse o primeiro item é : ' + arr[0]);
+
+        //O metodo 'sort()' ordena os itens em ordem alfabética
+        console.log(arr.sort());
+        console.log('Depois do sort o primeiro item é : ' + arr[0]);
+
+
+    </script>
+    
+</body>
+</html>

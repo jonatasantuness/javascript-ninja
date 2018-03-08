@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Criando Objetos</title>
+</head>
+<body>
+
+    <h1>Criando Objetos</h1>
+
+    <script>
+
+        //A palara chave 'Object' é uma função do JS que retorna um objeto vazio e ele tem uma propriedade chamada 'create' para criar objetos
+
+        //cada objeto tem um 'protótipo' que ele vai herdar propriedades de outro objeto
+        
+        //Herança
+        var pai = {
+            cabelo: 'Preto',
+            olhos: 'Castanho Claro'
+        }
+
+        var filho = Object.create(pai);
+        console.log(pai);
+        console.log(filho);
+
+        //Se mudar uma propriedade do filho, a mesma propriedade do pai continua intacta, pois neste caso não há refrência, somente herança dos valores.
+        filho.olhos = 'Castanho Escuro';
+        console.log('Propriedade do pai: ' + pai.olhos);
+        console.log('Propriedade do filho: ' + filho.olhos);
+        
+        //Através do método 'hasOwnProperty()' podemos conferir se a propriedade do objeto foi herdada ou se pertence a ele mesmo ou foi modificada.
+        console.log('Propriedade propria? ' + filho.hasOwnProperty('cabelo'));
+
+        console.log('Propriedade propria? ' + filho.hasOwnProperty('olhos'));
+
+        filho.cor = 'negro';
+        console.log('Propriedade propria? ' + filho.hasOwnProperty('cor'));
+
+        //Verificando quais propriedades do objeto são próprias
+        for(var prop in filho) {
+            if(filho.hasOwnProperty(prop)) {
+                console.log(prop);
+            }
+        }
+        
+    </script>
+    
+</body>
+</html>

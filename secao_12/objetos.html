@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Objetos</title>
+</head>
+<body>
+
+    <h1>Objetos</h1>
+
+    <p>-Mutáveis.</p>
+    <p>-Manipulados por referência.</p>
+
+    <script>
+        var obj = {
+            prop1: 'propriedade1',
+            prop2: 'propriedade2'
+        }
+
+        //É possivel alterar o objeto de diversas formas.
+        console.log(obj);
+
+        //alterando uma propriedade
+        obj.prop1 = 'prop1';
+        console.log('Propriedade alterada: ' + obj.prop1);
+
+        //deletando uma propriedade (retorna true)
+        console.log(delete obj.prop2);
+        console.log(obj.prop2);
+
+        //Adicionando a propriedade novamente
+        obj.prop2 = 'propriedade2';
+        console.log(obj.prop2);
+        
+        //Objetos podem ser manipulado por referência passsando para uma variavel
+        var objCopy = obj;
+        console.log(objCopy);
+
+        //Ou seja a variavel 'objCopy' não é uma cópia do objeto 'obj' e sim uma referência
+        console.log(objCopy === obj);
+
+        //Se eu mudar uma propriedade no 'objCopy' o 'obj' também será alterado
+        console.log(obj.prop1);
+        objCopy.prop1 = 'Mudei primeira prop no objCopy!';
+        console.log(obj.prop1);
+
+        //Alem do modo literal é possivel criar objetos com o modo construtor (new)
+        var newObj = new Object();
+        console.log(newObj);
+
+    </script>
+    
+</body>
+</html>
