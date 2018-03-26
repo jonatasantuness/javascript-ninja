@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title></title>
+</head>
+<body>
+
+    <h1>indexOf</h1>
+
+    <script>
+        //Procura se o valor exise no indice do array
+        var arr = [0,1,2,3,4,5];
+        var arrStr = ['batata','pizza','chocolate','queijo'];
+        
+        //Verifica se o valor 3 existe e retorna seu indice, se o item não existir ele retorna '-1'
+        console.log(arr.indexOf(3));
+
+        //Verifica se o item existe e retorna o indice
+        console.log(arrStr.indexOf('pizza'));
+
+        //pode ter um segundo parametro para especificar onde inicia a busca, a partir do indice '1' existe chocolate?
+        console.log(arrStr.indexOf('chocolate',1));
+
+        //A partir do indice 2 existe pizza?
+        console.log(arrStr.indexOf('pizza',2));
+
+        //Podemos verificar se o item existe verificando se o indice retorna '-1'
+        console.log(arrStr.indexOf('pizza',0) > -1 ? 'O item existe' : 'O item não existe');
+
+        //O metodo lastIndexOf() faz a mesma coisa que o indexOf porém procurando do final para o inicio.
+        //Do indice 2 para trás existe pizza? e qual seu indice?
+        console.log(arrStr.lastIndexOf('pizza',2));
+
+        //O método isArray do construtor 'Array' verifica se o que foi passado é array ou não e retorna booleano, pode ser útil pois quando vc usa 'typeOf' em um array ele retorna que é um objeto
+        console.log('É Array: ' + Array.isArray(arrStr));
+
+    </script>
+    
+</body>
+</html>

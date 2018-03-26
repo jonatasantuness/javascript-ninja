@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>forEach, Every, Some</title>
+</head>
+<body>
+
+    <h1>forEach, Every, Some</h1>
+
+    <script>
+        var arr = [1,2,3,4,5,6,7];
+        
+        //O forEach funciona como um for porém é mais rápido, e por ser um método conseguimos utilizar uma estrutura funcional
+        arr.forEach(function(item,index,array){
+            console.log(
+                'item: ' + item,
+                'index: ' + index,
+                'array: ' + array
+            );
+        });
+        
+        arr.forEach(function(item,index){
+            console.log(
+                'item: ' + item,
+                'index: ' + index
+            );
+        });
+
+        //Podemos aproveitar a função de varias formas, por exemplo, para somar todos os itens do array
+        var sum = 0;
+        arr.forEach(function(item) {
+            sum += item;
+        });
+        console.log('Soma de todos os itens: ' + sum);
+
+        //O método do every() retornar true ou false baseado no retorno da função que vc passar por parametro.
+        var every = arr.every(function(item) {
+            return item < 5;
+        });
+        //Vai retornar false pq nem todos os itens são menores que 5
+        console.log(every);
+
+        //O método some() é parecido com o every() porém se pelo menos um elemento array for true ele retornará true.
+        var some = arr.some(function(item) {
+            return item % 2 === 0;
+        });
+        //Se pelo menos um desse itens for par retornará true
+        console.log(some);
+    </script>
+    
+</body>
+</html>

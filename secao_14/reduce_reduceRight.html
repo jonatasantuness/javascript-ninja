@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>reduce e reduceRight</title>
+</head>
+<body>
+
+    <h1>reduce e reduceRight</h1>
+
+    <script>
+        var arr = [1,2,3,4,5];
+
+        //O método reduce() recebe dois parametros, uma função para redução e outro argumento que pode ser um valor inicial da redução, não modifica o array principal
+        var reduce = arr.reduce(function(acumulado, atual, index, array) {
+            return acumulado + atual;
+        }, 0);
+
+        /* O reduce pega o valor de acumulado que a princípio é o segundo parametro '0' e soma com o atual item do indice do array, ai vai percorrendo o array e somando o valor acumulado, se o segundo parametro não for passado, o valor acumulado passa a ser o primeiro item do item e valor atual o segundo item. */
+        /*
+        1º passo: 0 + 1 = 1
+        2º passo: 1 + 2 = 3
+        3º passo: 3 + 3 = 6
+        4º passo: 6 + 4 = 10
+        5º passo: 10 + 5 = 15
+        */
+
+        console.log('Valor aculado: ' + reduce);
+
+        var arrString = ['j','o','n','a','t','a','s'];
+
+        var reduceStr = arrString.reduce(function(acumulado, atual, item, index, array) {
+            return acumulado + atual;
+        });
+        
+        console.log(reduceStr);
+
+        //O reduceRight faz a mesma coisa porém da direita para esquerda
+        
+        var arr2 = ['r','o','m','a'];
+        var reduceRight = arr2.reduceRight(function(acumulado, atual, item, index, array) {
+            return acumulado + atual;
+        });
+
+        console.log(reduceRight);
+
+    </script>
+    
+</body>
+</html>

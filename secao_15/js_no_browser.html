@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Js no Browser</title>
+
+    <!-- colocando o arquivo no header para ele carregar antes da página. -->
+    <script>
+        console.log('JS no browser! JS do Header!');
+    </script>
+</head>
+
+<body>
+
+    <h1>Js no Browser</h1>
+    
+
+    <!-- O recomendado é utlizar um script externo antes do fechamento do 'body', pois quando o navegador carrega pela primeira vez o arquivo separado, ele faz cache e no proximo load ele pega o script da memoria  -->
+    <script src="js/main.js"></script>
+    <script src="js/main2.js"></script>
+</body>
+</html>

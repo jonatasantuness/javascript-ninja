@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>map()</title>
+</head>
+<body>
+
+    <h1>Método map()</h1>
+
+    <script>
+        //O map() percorre os itens do array e retorna um novo array
+
+        //Podemos retornar somente um array com itens por exemplo
+        var arr = [1,2,3,4,5,6,7];
+        var map = arr.map(function(item, index, array) {
+            return item;
+        });
+        console.log(map);
+        
+        //Retornando um objeto com o index e o item em suas respectivas propriedades.
+        var mapObj = arr.map(function(item, index, array) {
+            return {
+                index: index,
+                item: item
+            };
+        });
+        console.log(mapObj);
+
+        //O metodo filter() filtra os itens do array
+        var filter = arr.filter(function(item, index, array) {
+            return item % 2 === 0;
+        });
+        //Retornando só itens pares
+        console.log(filter);
+        
+
+        //Podemos retornar os nomes de um array em novo array mapeado e depois filtrar por exemplo somente os nomes com tamanho menor ou igual a 5, o array 'nomes' não será modificado
+        var nomes = ["jonatas", "Ester", "mia", "Gabriel","Fernando"];
+        var mapNomes = nomes.map(function(item) {
+            return item;
+        });
+
+        // console.log(mapNomes);
+
+        var filterNomes = mapNomes.filter(function(item) {
+            return item.length <= 5; 
+        });
+
+        console.log(filterNomes);
+
+        //Array ficou intacto
+        console.log(nomes);
+
+        //Método ninja, fazendo de uma vez só em métodos encadeados.
+        var nomesGrandes = ["Johnny", "Luis Fernando", "Maria", "Maria Joaquina", "Taina", "Wanderson Nunes"];
+
+        var mapNomesGr = nomesGrandes.map(function(item){
+            return item;
+        }).filter(function(item){
+            return item.length > 7;
+        });
+        
+        console.log(mapNomesGr);
+
+    </script>
+    
+</body>
+</html>
