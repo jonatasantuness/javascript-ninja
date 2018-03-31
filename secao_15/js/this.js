@@ -36,11 +36,11 @@
         this.prop2 = 'prop2';
     }
 
-    //Utilizando a função para criar um objeto de MyConstructor e e passa-lo para a variavel.
+    //Utilizando a função para criar um objeto de MyConstructor e passa-lo para a variavel.
     var construtor = new MyConstructor();
     console.log('myConstructor', construtor);
 
-    //também é possivel crua-lo direto, sem coloca-lo numa variável.
+    //também é possivel cria-lo direto, sem coloca-lo numa variável.
     console.log('myConstructor', new MyConstructor());
 
     //Obs: se vc chamar a função MyConstrutor() sem o 'new', o 'this' vai referenciar o objeto 'window' e ai vc estará passando propriedades 'prop1' e 'prop2' para o 'window'.
