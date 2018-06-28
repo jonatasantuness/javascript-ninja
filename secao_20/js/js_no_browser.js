@@ -51,4 +51,22 @@
     // getElementByClassName() - Retorna um 'HTMLCollection' do elemento com a respectiva classe
     console.log(doc.getElementsByClassName('my-text'));
 
+    // getElementByTagName() - Retorna um 'HTMLCollection' do elemento com as respectivas tags
+    console.log(doc.getElementsByTagName('span'));
+
+    //getElementByName() - Retorna um elemento pelo seu atributo 'name'
+    console.log(doc.getElementsByName('nome'));
+
+    /** Query Selector **/
+
+    // Os métodos acima podem ser armzenados em uma váriavel porém são dinâmicos (Se um elemento for adicionado ou exlcuido a variável muda também), se quiser ter uma váriavel estática o ideal são os métodos query selectors.
+
+    // querySelector() - Seleciona somente o primeiro elemento correspondente ao argumento
+    $div = doc.querySelector('div');
+    console.log($div);
+
+    // querySelectorAll() - Seleciona todos os elementos correspondentes ao argumento
+    $divs = doc.querySelector('div');
+    console.log($divs);
+    
 })(window, document);
