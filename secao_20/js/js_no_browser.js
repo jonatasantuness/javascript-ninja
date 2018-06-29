@@ -1,6 +1,6 @@
 // Nós podemos passar parâmetros para a IIFE que não fazem parte do escopo local, como por exemplo o objeto 'window' e o document.
 
-// sempre que você tiver objetos globais, e precisar usar dentro da IIFE, não use diretamente o objeto global. Passe-o por parâmetro, e use-o como uma referência local:
+// Sempre que você tiver objetos globais, e precisar usar dentro da IIFE, não use diretamente o objeto global. Passe-o por parâmetro, e use-o como uma referência local:
 (function (win, doc) {
     'use strict';
 
@@ -61,12 +61,16 @@
 
     // Os métodos acima podem ser armzenados em uma váriavel porém são dinâmicos (Se um elemento for adicionado ou exlcuido a variável muda também), se quiser ter uma váriavel estática o ideal são os métodos query selectors.
 
-    // querySelector() - Seleciona somente o primeiro elemento correspondente ao argumento
-    $div = doc.querySelector('div');
+    // querySelector() - Seleciona somente o primeiro elemento correspondente ao argumento e retorna uma 'NodeList'
+    var $div = doc.querySelector('div');
     console.log($div);
 
-    // querySelectorAll() - Seleciona todos os elementos correspondentes ao argumento
-    $divs = doc.querySelector('div');
+    // outro exeemplo mostrando que o argumento tem a mesma sintaxe usada no CSS
+    var input = doc.querySelector('[type="text"]');
+    console.log(input);
+
+    // querySelectorAll() - Seleciona todos os elementos correspondentes ao argumento e retorna uma 'NodeList'
+    var $divs = doc.querySelectorAll('div');
     console.log($divs);
     
 })(window, document);
