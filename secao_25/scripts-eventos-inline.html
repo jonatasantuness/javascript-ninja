@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>scripts e eventos inline</title>
+</head>
+
+<body>
+
+    <h1>Scripts e eventos inline</h1>
+
+    <!-- Podemos utilizar funções javascript inline no elemento HTML usando "javascript:" -->
+    <a href="javascript:boom()">Link</a>
+
+    <br>
+
+    <!-- Quando encontrar um código como este: O 'void' em liguagens fortemente tipadas é utilizado quando queremos fazer uma função que não tenha retorno, no caso do js o link abaixo não irá fazer nada; -->
+    <a href="javascript:void(0)">Link com Void</a>
+
+    <br>
+
+    <!-- Eventos inline -->
+    <a href="javascript:void(0)" onclick="boom()">Boom</a>
+
+    
+
+    <script>
+        function boom() {
+            alert('Booooooom');
+        }
+    </script>
+
+</body>
+
+</html>
