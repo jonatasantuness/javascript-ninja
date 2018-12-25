@@ -11,7 +11,7 @@
     // toString(): para cada tipo de elemento em js o método toString() age de forma diferente, para funções ele retorna a função literalmente em string.
     console.log(myFunction.toString());
 
-    // call(): este método faz a chamada da função, ou seja é mesma cois de fazer isso 'myFunction()', porém com o método call() voce pode definir quem será o 'this' pelo parametro
+    // call(): este método faz a chamada da função, ou seja é mesma coisa de fazer isso 'myFunction()', porém com o método call() voce pode definir quem será o 'this' pelo parametro
     console.log(myFunction);
     console.log(myFunction.call()); 
 
