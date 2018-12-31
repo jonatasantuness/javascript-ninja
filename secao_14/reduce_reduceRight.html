@@ -31,11 +31,18 @@
 
         var arrString = ['j','o','n','a','t','a','s'];
 
-        var reduceStr = arrString.reduce(function(acumulado, atual, item, index, array) {
+        var reduceStr = arrString.reduce(function(acumulado, atual, index, array) {
             return acumulado + atual;
         });
         
         console.log(reduceStr);
+
+        // Observe o comportamento do index
+        var reduceStrIndex = arrString.reduce(function(acumulado, atual, index, array) {
+            return acumulado + atual + index;
+        });
+
+        console.log(reduceStrIndex);
 
         //O reduceRight faz a mesma coisa porém da direita para esquerda
         
